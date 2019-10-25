@@ -11,9 +11,19 @@ JDK 11 or JDK12 is needed to run this application. JDK 13 is not yet compatible 
 ./gradlew client:run
 ```
 
+## Testing the client app
+```bash
+./gradlew client:test
+```
+
 ## Running the server app
 ```bash
 ./gradlew server:run
+```
+
+## Testing the server app
+```bash
+./gradlew server:test
 ```
 
 ## Development
