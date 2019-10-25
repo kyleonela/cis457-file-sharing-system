@@ -1,12 +1,12 @@
+group = "edu.gvsu.cis.cis457"
+version = "1.0-SNAPSHOT"
+
 plugins {
     java
     kotlin("jvm") version "1.2.71"
     application
     id("org.openjfx.javafxplugin") version "0.0.8"
 }
-
-group = "edu.gvsu.cis.cis457"
-version = "1.0-SNAPSHOT"
 
 application {
     mainClassName = "edu.gvsu.cis.cis457.filesharingsystem.client.MainApp"
@@ -22,14 +22,12 @@ repositories {
     jcenter()
 }
 
-sourceSets {
-    main {
-        resources {
-            srcDir ("./src/main/resources")
-        }
-    }
-}
-
 dependencies {
     implementation(kotlin("stdlib"))
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.5.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.5.2")
+}
+
+tasks.withType<Test> {
+    useJUnitPlatform()
 }
